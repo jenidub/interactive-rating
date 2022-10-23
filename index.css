@@ -1,0 +1,54 @@
+body {
+  background-color: #141518;
+  color: white;
+}
+
+#rating-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: left;
+  width: 400px;
+  height: 500px;
+  background-color: #1D232D;
+  margin: 50px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#star-icon {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: hsl(216, 12%, 54%);
+  border-radius: 50%;
+  z-index:1;
+  padding: 5px;
+}
+
+img {
+  width: 20px;
+  z-index: 2;
+  margin: 0px 10px 7px 0px;
+}
+
+#rating-text h2,
+#rating-text p {
+  font-family: 'Overpass', sans-serif;
+}
+
+#rating-text h2 {
+  font-weight: 700;
+}
+
+#rating-text p {
+  font-weight: 400;
+  line-height: 24px;
+  color: hsl(217, 12%, 63%);
+}
+
+#submit-button {
+  color: hsl(25, 97%, 53%);
+}
+
+@media only screen and (max-width: 375px) {
+}
