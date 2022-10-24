@@ -74,6 +74,19 @@ body {
   font-weight: 700;
 }
 
+.rating-button:active,
+.rating-button:hover {
+  color: white;
+}
+
+.rating-button:active {
+  background-color: #7C8798;
+}
+
+.rating-button:hover {
+  background-color: #FB7616;
+}
+
 #submit-button {
   background-color: hsl(25, 97%, 53%);
   align-items: center;
@@ -108,6 +121,11 @@ body {
   color: white;
   font-weight: 700;
   letter-spacing: 3px;
+}
+
+#submit-button:hover {
+  background-color: white;
+  color:hsl(25, 97%, 53%);
 }
 
 @media only screen and (max-width: 415px) {
