@@ -11,6 +11,7 @@
   <title>Interactive Rating Page</title>
 </head>
 <body>
+    <!-- Rating Selection container -->
     <div id="rating-container">
       <div id="star-icon">
         <img id="star-icon-img" src="./images/icon-star.svg" alt="Star Icon">
@@ -21,36 +22,42 @@
     to help us improve our offering!</p>
       </div>
       <div id="rating-icon-row">
-        <button class="rating-button">1</button>
-        <button class="rating-button">2</button>
-        <button class="rating-button">3</button>
-        <button class="rating-button">4</button>
-        <button class="rating-button">5</button>
+        <button class="rating-button" id="1" onclick="ratingSelect(1)">1</button>
+        <button class="rating-button" id="2" onclick="ratingSelect(2)">2</button>
+        <button class="rating-button" id="3" onclick="ratingSelect(3)">3</button>
+        <button class="rating-button" id="4" onclick="ratingSelect(4)">4</button>
+        <button class="rating-button" id="5" onclick="ratingSelect(5)">5</button>
       </div>
       <div class="submit-button-container">
-        <button id="submit-button" role="button">Submit</button>
+        <button
+          id="submit-button"
+          onclick=""
+          role="button">
+          Submit
+        </button>
       </div>
     </div>
 
-  <!-- Rating state start -->
+  <!-- Thank You Container -->
+    <div id="thank-you-container">
+      <img src="./images/illustration-thank-you.svg" alt="Thank You Image with Tablet">
+      <div id="selection-display">
+        <p id="user-selection"></p>
+      </div>
+      <div id="selection-text">
+        <h2>Thank you!</h2>
+        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+      </div>
+    </div>
 
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  <!-- You selected <!-- Add rating here -- out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <div class="attribution">
+    <script>
+      function ratingSelect(rating) {
+        document.getElementById("user-selection").innerHTML = `You selected ${rating} out of 5`;
+      }
+    </script>
+</body>
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://www.frontendmentor.io/profile/jenidub">JeniDub</a>.
-  </div>
-
-  <!- Thank you state end -->
-
-</body>
+  </div> -->
 </html>
