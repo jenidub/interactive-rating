@@ -29,12 +29,7 @@
         <button class="rating-button" id="5" onclick="ratingSelect(5)">5</button>
       </div>
       <div class="submit-button-container">
-        <button
-          id="submit-button"
-          onclick=""
-          role="button">
-          Submit
-        </button>
+        <button id="submit-button" onclick="changeDisplay()" role="button">Submit</button>
       </div>
     </div>
 
@@ -51,8 +46,21 @@
     </div>
 
     <script>
+      let ratingPage = document.getElementById("rating-container");
+      let thankYouPage = document.getElementById("thank-you-container");
+
+      //On Load Display Settings
+      ratingPage.style.display = "block";
+      thankYouPage.style.display = "none";
+
       function ratingSelect(rating) {
         document.getElementById("user-selection").innerHTML = `You selected ${rating} out of 5`;
+      }
+
+      //After Submit Button Clicked
+      function changeDisplay() {
+        thankYouPage.style.display = "block";
+        ratingPage.style.display = "none";
       }
     </script>
 </body>
