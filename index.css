@@ -5,12 +5,15 @@ body {
   align-items: center;
   background-color: #141518;
   color: white;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
 }
 
-#rating-container {
+#rating-container,
+#thank-you-container {
   display: flex;
   flex-flow: column wrap;
-  align-items: left;
+  align-items: center;
   justify-content: center;
   width: 80%;
   max-width: 375px;
@@ -22,6 +25,7 @@ body {
   margin: 100px;
 }
 
+/* Rating Component Styling */
 #star-icon {
   position: relative;
   width: 20px;
@@ -39,16 +43,12 @@ body {
   color: hsl(25, 97%, 53%);
 }
 
-#rating-text h2,
-#rating-text p {
-  font-family: 'Overpass', sans-serif;
-}
-
 #rating-text h2 {
   font-weight: 700;
 }
 
-#rating-text p {
+#rating-text p,
+#selection-text p {
   font-weight: 400;
   line-height: 24px;
   color: hsl(217, 12%, 63%);
@@ -126,6 +126,47 @@ body {
 #submit-button:hover {
   background-color: white;
   color:hsl(25, 97%, 53%);
+}
+
+/* Thank You Page Styling */
+#tablet-icon-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#selection-display {
+  width: 50%;
+  /* margin-left: auto;
+  margin-right: auto; */
+  text-align: center;
+  background-color: #282E39;
+  border-radius: 25px;
+  padding: 5px;
+  margin: 25px auto;
+}
+
+#user-selection {
+  color:hsl(25, 97%, 53%);
+  font-size: 14px;
+  font-family: 'Overpass', sans-serif;
+  margin: 0px;
+  height: fit-content;
+}
+
+#selection-text h2,
+#selection-text p {
+  text-align: center;
+}
+
+#selection-text h2 {
+  font-weight: 700;
+}
+
+#selection-text p {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @media only screen and (max-width: 415px) {
