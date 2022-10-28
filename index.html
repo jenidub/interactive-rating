@@ -11,7 +11,7 @@
   <title>Interactive Rating Page</title>
 </head>
 <body>
-    <!-- Rating Selection container -->
+    <!-- Rating Selection Container -->
     <div id="rating-container">
       <div id="star-icon">
         <img id="star-icon-img" src="./images/icon-star.svg" alt="Star Icon">
@@ -29,7 +29,7 @@
         <button class="rating-button" id="5" onclick="ratingSelect(5)">5</button>
       </div>
       <div class="submit-button-container">
-        <button id="submit-button" onclick="changeDisplay()" role="button">Submit</button>
+        <button class="submit-button" onclick="changeDisplay()" role="button">Submit</button>
       </div>
     </div>
 
@@ -42,28 +42,42 @@
         <p id="user-selection"></p>
       </div>
       <div id="selection-text">
-        <h2>Thank you!</h2>
-        <p>We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+        <h2 id="selection-text-h2">Thank you!</h2>
+        <p id="selection-text-p">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+        <button class="submit-button" id="resubmit-button" onclick="resetDisplay()">Click to Submit <br>Another Rating</button>
       </div>
     </div>
 
     <script>
       let ratingPage = document.getElementById("rating-container");
       let thankYouPage = document.getElementById("thank-you-container");
+      let userRating = document.getElementById("user-selection");
 
       //On Load Display Settings
       ratingPage.style.display = "block";
       thankYouPage.style.display = "none";
 
       function ratingSelect(rating) {
-        document.getElementById("user-selection").innerHTML = `You selected ${rating} out of 5`;
+        userRating.innerHTML = `You selected ${rating} out of 5`;
       }
 
       //After Submit Button Clicked
       function changeDisplay() {
         thankYouPage.style.display = "block";
         ratingPage.style.display = "none";
+        if(userRating.innerHTML === "") {
+          document.querySelector("#selection-display").remove();
+          document.querySelector("#selection-text-h2").innerHTML = "No Rating Was Given";
+          document.querySelector("#selection-text-p").innerHTML = "Please use the button below to submit a rating";
+        }
       }
+
+      //After Resubmit Button Click
+      function resetDisplay() {
+        ratingPage.style.display = "block";
+        thankYouPage.style.display = "none";
+      }
+
     </script>
 </body>
   <!-- <div class="attribution">
